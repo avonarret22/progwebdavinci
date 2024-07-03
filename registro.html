@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro - Psicóloga</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo"> Lic.Melanie Porretti</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="reservar.html">Reserva de Turnos</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row">
+            <section class="col-md-6 offset-md-3">
+                <hgroup>
+                    <h2>Registro</h2>
+                    <h3>Crea tu cuenta</h3>
+                </hgroup>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rol">Soy</label>
+                        <select id="rol" name="rol" class="form-control" required>
+                            <option value="paciente">Paciente</option>
+                            <option value="profesional">Profesional de la Salud</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Género</label>
+                        <select id="genero" name="genero" class="form-control" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="repassword">Repetir Contraseña</label>
+                        <input type="password" id="repassword" name="repassword" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="obra-social">Obra Social</label>
+                        <select id="obra-social" name="obra-social" class="form-control" required>
+                            <option value="OSDE">OSDE</option>
+                            <option value="Swiss Medical">Swiss Medical</option>
+                            <option value="Galeno">Galeno</option>
+                            <option value="Medicus">Medicus</option>
+                            <option value="Omint">Omint</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+                <p>O ingresa con:</p>
+                <button class="btn btn-danger" onclick="location.href='https://accounts.google.com/signin/v2/identifier'">
+                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo"> Ingresar con Google
+                </button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer bg-light text-center">
+        <small><a href="index.html">Inicio</a> • <a href="noticias.html">Noticias</a> • <a href="blog.html">Blog</a> • <a href="reservar.html">Reserva de Turnos</a> • <a href="login.html">Login</a> • <a href="registro.html">Registro</a></small>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

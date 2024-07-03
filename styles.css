@@ -1,0 +1,336 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    line-height: 1.6; /* Altura de línea */
+    color: #333; /* Color del texto */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno general */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrando el contenedor */
+    padding: 20px; /* Relleno interno del contenedor */
+}
+
+main {
+    margin-top: 160px; /* Margen superior para evitar superposición con el menú */
+}
+
+h1, h2, h3, h4 {
+    color: #444; /* Color de los encabezados */
+}
+
+a {
+    color: #007BFF; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado en los enlaces al pasar el ratón */
+}
+
+/* Barra de Navegación */
+nav {
+    background-color: #fff; /* Color de fondo del menú */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+    position: static; /* Menú fijo en la parte superior */
+    top: 0; /* Alineación superior */
+    left: 0; /* Alineación izquierda */
+    width: 100%; /* Ancho completo del menú */
+    z-index: 1000; /* Nivel de pila para que esté por encima del contenido */
+    padding: 10px; /* Relleno del menú */
+}
+
+nav ul {
+    display: flex; /* Flexbox para el menú */
+    justify-content: space-between; /* Espacio entre elementos del menú */
+    align-items: center; /* Alinear elementos verticalmente en el centro */
+    padding: 0; /* Sin relleno */
+    list-style: none; /* Sin viñetas en la lista */
+    margin: 30; /* Sin margen */
+}
+
+nav ul li {
+    margin: 0 10px; /* Margen entre elementos del menú */
+}
+
+nav ul li a {
+    padding: 10px 15px; /* Relleno interno de los enlaces del menú */
+    transition: background-color 0.3s; /* Transición suave del fondo al pasar el ratón */
+}
+
+nav ul li a:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.logo {
+    width: 40px; /* Ancho del logo */
+    height: auto; /* Altura automática del logo */
+    vertical-align: middle; /* Alineación vertical del logo */
+    margin-right: 10px; /* Margen derecho del logo */
+}
+
+/* Página de Inicio */
+.grid {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+section {
+    background-color: #fff; /* Color de fondo de las secciones */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de las secciones */
+    padding: 20px; /* Relleno interno de las secciones */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave al pasar el ratón */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Mover sección hacia arriba al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el ratón */
+}
+
+section h3 {
+    margin-top: 0; /* Sin margen superior en encabezados de sección */
+}
+
+section p {
+    margin-bottom: 0; /* Sin margen inferior en párrafos de sección */
+}
+
+figure {
+    margin: 0; /* Sin margen en figuras */
+    padding: 0; /* Sin relleno en figuras */
+}
+
+.featured-image {
+    width: 50%; /* Ancho de las imágenes destacadas */
+    border-radius: 8px; /* Bordes redondeados de las imágenes */
+}
+
+/* Grid de Servicios en la Página de Inicio */
+.services-grid {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático de columnas */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.service-box {
+    background-color: #fff; /* Color de fondo de las cajas de servicio */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de las cajas */
+    padding: 10px; /* Relleno interno de las cajas */
+    text-align: center; /* Alineación centrada del texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave al pasar el ratón */
+}
+
+.service-box:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el ratón */
+}
+
+.service-box img {
+    width: 100%; /* Ancho completo de las imágenes */
+    height: 100px; /* Altura fija de las imágenes */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el contenedor */
+    border-radius: 8px; /* Bordes redondeados de las imágenes */
+    margin-bottom: 10px; /* Margen inferior de las imágenes */
+}
+
+.service-box h4 {
+    margin-top: 10px; /* Margen superior de los encabezados */
+    margin-bottom: 0; /* Sin margen inferior de los encabezados */
+}
+
+/* Estilos de Formularios */
+form {
+    display: flex; /* Uso de flexbox */
+    flex-direction: column; /* Dirección de los elementos del formulario */
+    gap: 10px; /* Espacio entre elementos del formulario */
+    max-width: 350px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+form label {
+    margin-bottom: 5px; /* Margen inferior de las etiquetas */
+    font-weight: bold; /* Negrita en las etiquetas */
+}
+
+form input, form select, form button {
+    padding: 10px; /* Relleno interno de los inputs, selects y botones */
+    border-radius: 4px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde de los inputs, selects y botones */
+}
+
+form button {
+    background-color: #007BFF; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Botón de Google */
+.google-button {
+    display: flex; /* Flexbox para el botón */
+    align-items: center; /* Alinear elementos verticalmente en el centro */
+    justify-content: center; /* Alinear elementos horizontalmente en el centro */
+    padding: 10px; /* Relleno interno */
+    background-color: #DB4437; /* Color de fondo del botón de Google */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 10px; /* Margen superior */
+}
+
+.google-button img {
+    margin-right: 10px; /* Margen derecho de la imagen */
+}
+
+.google-button:hover {
+    background-color: #c53829; /* Color de fondo al pasar el ratón */
+}
+
+/* Sección de Formularios (por ejemplo, Login, Registro) */
+.form-section {
+    background-color: #fff; /* Color de fondo de la sección de formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de la sección de formulario */
+    padding: 20px; /* Relleno interno de la sección de formulario */
+    margin-top: 60px; /* Separación con el menú fijo */
+}
+
+.form-section h2, .form-section h3 {
+    text-align: center; /* Alineación centrada de los encabezados */
+}
+
+.form-section p {
+    text-align: center; /* Alineación centrada de los párrafos */
+}
+
+.form-section ul {
+    list-style: none; /* Sin viñetas en la lista */
+    padding: 0; /* Sin relleno en la lista */
+    text-align: center; /* Alineación centrada de la lista */
+}
+
+.form-section ul li {
+    display: inline-block; /* Elementos en línea */
+    margin: 10px; /* Margen de los elementos de la lista */
+}
+
+.form-section ul li .button {
+    background-color: #007BFF; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    padding: 10px 20px; /* Relleno interno de los botones */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado en los botones */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.form-section ul li .button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para Páginas de Noticias y Blog */
+.article-grid {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.article-section {
+    background-color: #fff; /* Color de fondo de las secciones de artículos */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de las secciones */
+    padding: 20px; /* Relleno interno de las secciones */
+    margin-bottom: 20px; /* Margen inferior de las secciones */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave al pasar el ratón */
+}
+
+.article-section:hover {
+    transform: translateY(-5px); /* Mover sección hacia arriba al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el ratón */
+}
+
+.article-section h3 {
+    margin-top: 0; /* Sin margen superior en encabezados de artículos */
+}
+
+.article-section p {
+    margin-bottom: 0; /* Sin margen inferior en párrafos de artículos */
+}
+
+.article-section img {
+    width: 100%; /* Ancho completo de las imágenes */
+    height: auto; /* Altura automática de las imágenes */
+    border-radius: 8px; /* Bordes redondeados de las imágenes */
+    margin-bottom: 10px; /* Margen inferior de las imágenes */
+}
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #fff; /* Color de fondo del pie de página */
+    padding: 10px; /* Relleno del pie de página */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra del pie de página */
+    text-align: center; /* Alineación centrada del texto */
+    margin-top: 20px; /* Margen superior del pie de página */
+}
+
+footer small a {
+    margin: 0 5px; /* Margen de los enlaces del pie de página */
+    color: #007BFF; /* Color de los enlaces del pie de página */
+}
+
+footer small a:hover {
+    text-decoration: underline; /* Subrayado en los enlaces al pasar el ratón */
+}
+
+/* Estilos para los paneles de usuario */
+.profile-section {
+    background-color: #fff; /* Color de fondo de la sección de perfil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de la sección de perfil */
+    padding: 20px; /* Relleno interno de la sección de perfil */
+}
+
+.profile-picture {
+    width: 150px; /* Ancho de la imagen de perfil */
+    height: 150px; /* Altura de la imagen de perfil */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el contenedor */
+    margin-bottom: 10px; /* Margen inferior de la imagen */
+}
+
+.profile-details {
+    display: flex; /* Uso de flexbox */
+    flex-direction: column; /* Dirección de los elementos del perfil */
+    gap: 10px; /* Espacio entre elementos del perfil */
+}
+
+.important-announcements {
+    background-color: #fff; /* Color de fondo de los comunicados */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de los comunicados */
+    padding: 20px; /* Relleno interno de los comunicados */
+    margin-top: 20px; /* Margen superior */
+}
+
+.calendar-section {
+    background-color: #fff; /* Color de fondo del calendario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del calendario */
+    padding: 20px; /* Relleno interno del calendario */
+    margin-top: 20px; /* Margen superior */
+    /* Añadido para asegurar que el calendario se muestre */
+    min-height: 500px;
+}
