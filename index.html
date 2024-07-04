@@ -3,14 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Página Principal - Psicóloga</title>
+    <title>Inicio - Psicóloga</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-body {
+            flex-grow: 1;
+        }
+        .card-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            transition: box-shadow 0.3s;
+        }
+        .card-container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .card-title:hover {
+            color: #007BFF;
+            transform: scale(1.05);
+        }
+        .card-text {
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .card-text:hover {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo"> Lic.Melanie Porretti</a>
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo"> Psicóloga Cognitivo Conductual</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,50 +74,61 @@
             </ul>
         </div>
     </nav>
-    <main class="container">
-        <div class="row">
-            <section class="col-md-12">
-                <hgroup>
-                    <h2>Especialista en Terapia Cognitivo Conductual</h2>
-                    <h3>Lic. Melanie Porretti</h3>
-                </hgroup>
-                <p>Brindamos atención psicológica personalizada y profesional. Conozca más sobre nuestros servicios y cómo podemos ayudarle a alcanzar su bienestar emocional.</p>
-                <figure>
-                    <img src="dificil.jpg" alt="Terapia Cognitivo Conductual" class="img-fluid">
-                </figure>
-                <h3>Servicios Brindados</h3>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="terap white.jpg" class="card-img-top" alt="Terapia Individual">
-                            <div class="card-body">
-                                <h4 class="card-title">Terapia Individual</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="img body.jpg" class="card-img-top" alt="Terapia de Parejas">
-                            <div class="card-body">
-                                <h4 class="card-title">Terapia de Parejas</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="img terap 2.jpg" class="card-img-top" alt="Terapia Familiar">
-                            <div class="card-body">
-                                <h4 class="card-title">Terapia Familiar</h4>
-                            </div>
+    
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <div class="card-container">
+            <div class="row">
+                <!-- Primera Grilla -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="bien.jpg" class="card-img-top" alt="Imagen 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Terapia Cognitivo Conductual</h5>
+                            <p class="card-text">La terapia cognitivo-conductual es un tratamiento psicológico que busca cambiar los patrones de pensamiento y comportamiento que afectan negativamente la vida del paciente.</p>
                         </div>
                     </div>
                 </div>
-            </section>
+                <!-- Segunda Grilla -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="neneventana.jpg" class="card-img-top" alt="Imagen 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Psicología Infantil</h5>
+                            <p class="card-text">La psicología infantil se centra en el desarrollo mental, emocional y social de los niños desde el nacimiento hasta la adolescencia.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tercera Grilla -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="tipo.jpg" class="card-img-top" alt="Imagen 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Psicoterapia para Adultos</h5>
+                            <p class="card-text">La psicoterapia para adultos aborda diversos problemas emocionales y psicológicos para mejorar la calidad de vida y el bienestar general.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuarta Grilla -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="img terap onl.jpg" class="card-img-top" alt="Imagen 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Terapia de Pareja</h5>
+                            <p class="card-text">La terapia de pareja ayuda a las parejas a resolver conflictos y mejorar su relación a través de la comunicación y técnicas de resolución de problemas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    
+    <!-- Footer -->
     <footer class="footer bg-light text-center">
         <small><a href="index.html">Inicio</a> • <a href="noticias.html">Noticias</a> • <a href="blog.html">Blog</a> • <a href="reservar.html">Reserva de Turnos</a> • <a href="login.html">Login</a> • <a href="registro.html">Registro</a></small>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
