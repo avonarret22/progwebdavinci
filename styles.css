@@ -416,6 +416,9 @@ footer small a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .article-card:hover {
@@ -425,11 +428,15 @@ footer small a:hover {
 
 .article-card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajustar la imagen para cubrir el contenedor */
 }
 
 .article-card-body {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .article-card-title {
@@ -447,8 +454,10 @@ footer small a:hover {
     font-size: 1rem;
     color: #333;
     transition: color 0.3s;
+    flex-grow: 1; /* Permitir que el texto crezca para llenar el espacio */
 }
 
 .article-card-text:hover {
     color: #007BFF;
 }
+
