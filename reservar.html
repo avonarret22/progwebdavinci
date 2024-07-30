@@ -33,7 +33,7 @@
                     <h3>Agenda tu cita con la Lic. Melanie Porretti</h3>
                 </hgroup>
                 <p>Por favor completa el siguiente formulario para reservar tu turno.</p>
-                <form>
+                <form id="reserva-form">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" required>
@@ -58,8 +58,11 @@
                         <label for="hora">Hora de la cita</label>
                         <input type="time" id="hora" name="hora" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Reservar</button>
+                    <button type="submit" id="reservar-btn" class="btn btn-primary">Reservar</button>
                 </form>
+                <div id="mensaje" class="alert alert-success mt-3" style="display: none;">
+                    Su turno ha sido registrado para la fecha seleccionada.
+                </div>
             </section>
         </div>
     </main>
@@ -69,5 +72,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('reserva-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('mensaje').style.display = 'block';
+        });
+    </script>
 </body>
 </html>

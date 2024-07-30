@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encontrar Profesional - Psicóloga</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo">Lic. Melanie Porretti</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="reservar.html">Reserva de Turnos</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>Encontrar Profesional</h1>
+        <p>En esta sección, puedes buscar y encontrar un profesional que se adapte a tus necesidades. Completa los campos a continuación para filtrar la búsqueda.</p>
+        <form>
+            <div class="form-group">
+                <label for="especialidad">Especialidad</label>
+                <select id="especialidad" name="especialidad" class="form-control">
+                    <option value="terapia-cognitiva">Terapia Cognitivo Conductual</option>
+                    <option value="psicologia-infantil">Psicología Infantil</option>
+                    <option value="psicoterapia-adultos">Psicoterapia para Adultos</option>
+                    <option value="terapia-pareja">Terapia de Pareja</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="ubicacion" name="ubicacion" class="form-control" placeholder="Ciudad o código postal">
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+        <!-- Resultados de búsqueda -->
+        <div id="resultados" class="mt-4">
+            <h2>Resultados de Búsqueda</h2>
+            <p>Aquí se mostrarán los profesionales disponibles según los criterios de búsqueda.</p>
+            <div class="card-deck">
+                <!-- Profesional 1 -->
+                <div class="card">
+                    <img src="profesional1.jpg" class="card-img-top" alt="Foto del profesional 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dra. Laura García</h5>
+                        <p class="card-text">Especialidad: Terapia Cognitivo Conductual</p>
+                        <p class="card-text"><small class="text-muted">Contacto: <a href="mailto:laura.garcia@example.com">laura.garcia@example.com</a> | <a href="https://wa.me/123456789">WhatsApp</a> | Tel: (123) 456-7890</small></p>
+                        <p class="card-text">Dra. Laura García tiene más de 10 años de experiencia ayudando a pacientes a superar la ansiedad y la depresión mediante técnicas de terapia cognitivo conductual.</p>
+                    </div>
+                </div>
+                <!-- Profesional 2 -->
+                <div class="card">
+                    <img src="profesional2.jpg" class="card-img-top" alt="Foto del profesional 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lic. Carlos Pérez</h5>
+                        <p class="card-text">Especialidad: Psicología Infantil</p>
+                        <p class="card-text"><small class="text-muted">Contacto: <a href="mailto:carlos.perez@example.com">carlos.perez@example.com</a> | <a href="https://wa.me/987654321">WhatsApp</a> | Tel: (987) 654-3210</small></p>
+                        <p class="card-text">Lic. Carlos Pérez se especializa en el desarrollo emocional y social de los niños, ofreciendo apoyo tanto a los niños como a sus familias.</p>
+                    </div>
+                </div>
+                <!-- Profesional 3 -->
+                <div class="card">
+                    <img src="profesional3.jpg" class="card-img-top" alt="Foto del profesional 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Dra. María López</h5>
+                        <p class="card-text">Especialidad: Terapia de Pareja</p>
+                        <p class="card-text"><small class="text-muted">Contacto: <a href="mailto:maria.lopez@example.com">maria.lopez@example.com</a> | <a href="https://wa.me/1122334455">WhatsApp</a> | Tel: (112) 233-4455</small></p>
+                        <p class="card-text">Dra. María López ayuda a parejas a mejorar su comunicación y resolver conflictos, fortaleciendo su relación a largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer bg-light text-center">
+        <small><a href="index.html">Inicio</a> • <a href="noticias.html">Noticias</a> • <a href="blog.html">Blog</a> • <a href="reservar.html">Reserva de Turnos</a> • <a href="login.html">Login</a> • <a href="registro.html">Registro</a></small>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
